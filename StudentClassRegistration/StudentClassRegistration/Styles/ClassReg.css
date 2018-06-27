@@ -1,0 +1,394 @@
+﻿/* DEFAULTS for ASP.NET
+	background: #00143E; old color
+----------------------------------------------------------*/
+
+body {
+    background-position: center center;
+    background: #4dd338;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    background-image: url('../Images/MSA_BACKGROUND.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+hr {
+    height: 1px;
+    color: #FFCC00;
+    background-color: #FFCC00;
+}
+
+a:link, a:visited {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #681927;
+    text-decoration: none;
+}
+
+a:active {
+    color: #034af3;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+    padding: 5px;
+    width: 800px;
+    background-color: #B2B2BE;
+    margin: 20px auto 0px auto;
+    border: 3px solid #727CA3;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    margin: 1px;
+    padding: 0px;
+    background: #4dd338;
+    width: 98%;
+    top: 0px;
+    left: 10px;
+    height: 81px;
+}
+
+    .header h1 {
+        font-weight: 700;
+        margin: 0px;
+        padding: 0px 0px 0px 20px;
+        color: #604d21;
+        border: none;
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+.main {
+    padding: 20px 10px 10px 10px;
+    margin: 70px 17px 0px 57px;
+    background-color: #FFFFFF;
+    position: relative;
+    height: 800px;
+}
+
+.leftCol {
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer {
+    color: #604d21;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink {
+    background-color: #4DD338;
+    width: 780px;
+    height: 14px;
+}
+
+div.menu {
+    padding: 1px 5px 1px 5px;
+    z-index: 2;
+}
+
+    div.menu ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+        background-color: #4e6d49;
+    }
+
+        div.menu ul li a, div.menu ul li a:visited {
+            background-color: #4dd338;
+            border: 1px #00143E solid;
+            color: #dde4ec;
+            display: block;
+            line-height: 1.35em;
+            padding: 4px 20px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+            div.menu ul li a:hover {
+                background-color: #b6ff00;
+                color: #4dd338;
+                text-decoration: none;
+            }
+
+            div.menu ul li a:active {
+                background-color: #465c71;
+                color: #b6ff00;
+                text-decoration: none;
+            }
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+    fieldset p {
+        margin: 2px 12px 10px 10px;
+    }
+
+    fieldset.login label, fieldset.register label, fieldset.changePassword label {
+        display: block;
+    }
+
+    fieldset label.inline {
+        display: inline;
+    }
+
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo {
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear {
+    clear: both;
+}
+
+.title {
+    background: #4F5777;
+    display: block;
+    float: left;
+    text-align: left;
+    width: 750px;
+    font-family: 'Lucida Sans Unicode';
+    font-size: x-large;
+    color: #FFFFFF;
+    height: 81px;
+}
+
+
+
+
+.loginDisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+    background: #4F5777;
+}
+
+    .loginDisplay a:link {
+        color: white;
+    }
+
+    .loginDisplay a:visited {
+        color: white;
+        background-color: #B4B4BE;
+    }
+
+    .loginDisplay a:hover {
+        color: white;
+    }
+
+.failureNotification {
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.submitButton {
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+/* NWTech Styles */
+
+#ImageHeader {
+    width: 700px;
+    height: 120px;
+    margin-left: -10px;
+}
+
+#ImageLogo {
+    width: 120px;
+    height: 97px;
+    position: absolute;
+    top: 0px;
+    left: 651px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.textPanes {
+    border: 2px solid #00143E;
+    background-color: #FFFFFF;
+    padding: 5px;
+}
+
+#fullPane {
+    width: 730px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 795px;
+}
+
+#leftPane {
+    width: 360px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 795px;
+}
+
+#rightPane {
+    width: 360px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#topRightPane {
+    margin: 10px 10px 10px 100px;
+    width: 355px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#middleRightPane {
+    margin: 10px 10px 10px 10px;
+    width: 355px;
+    height: 100px;
+    position: absolute;
+    top: 120px;
+    left: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#bottomRightPane {
+    margin: 10px 10px 10px 10px;
+    width: 355px;
+    height: 100px;
+    position: absolute;
+    top: 240px;
+    left: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textPaneHeading1 {
+    font-size: medium;
+    font-weight: bold;
+    color: #00143E;
+}
+
+.textPaneHeading2 {
+    font-size: small;
+    font-weight: bold;
+    color: #00143E;
+}
+
+.textPaneHeading3 {
+    font-size: x-small;
+    font-weight: bold;
+    color: #00143E;
+}

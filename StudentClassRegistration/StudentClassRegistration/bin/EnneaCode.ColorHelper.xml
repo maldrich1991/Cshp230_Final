@@ -1,0 +1,654 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EnneaCode.ColorHelper</name>
+    </assembly>
+    <members>
+        <member name="T:EnneaCode.ColorHelper.ecColor">
+            <summary>
+            定义有数种额外操作功能的颜色。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="a">Alpha分量0-1。</param>
+            <param name="r">红色分量0-1。</param>
+            <param name="g">绿色分量0-1。</param>
+            <param name="b">蓝色分量0-1。</param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="a">Alpha分量0-255。</param>
+            <param name="r">红色分量0-255。</param>
+            <param name="g">绿色分量0-255。</param>
+            <param name="b">蓝色分量0-255。</param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor(System.Windows.Media.Color)">
+            <summary>
+            
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor(System.Windows.Media.SolidColorBrush)">
+            <summary>
+            
+            </summary>
+            <param name="brush"></param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="r">红色分量0-255。</param>
+            <param name="g">绿色分量0-255。</param>
+            <param name="b">蓝色分量0-255。</param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="hue">色相角0-360。</param>
+            <param name="saturation">饱和度0-1。</param>
+            <param name="value">明度0-1。</param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.#ctor(System.String)">
+            <summary>
+            从16进制字符串创建颜色。
+            </summary>
+            <param name="hex">颜色的16进制表示法。格式为[#][AA]RRGGBB</param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.op_Explicit(System.String)~EnneaCode.ColorHelper.ecColor">
+            <summary>
+            从16进制字符串强制转换为新的ecColor。
+            </summary>
+            <param name="hex"></param>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.A">
+            <summary>
+            获取或设置Alpha分量0-1。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.R">
+            <summary>
+            获取或设置红色分量0-1。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.G">
+            <summary>
+            获取或设置绿色分量0-1。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.B">
+            <summary>
+            获取或设置蓝色分量0-1。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.AByte">
+            <summary>
+            获取或设置Alpha分量0-255。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.RByte">
+            <summary>
+            获取或设置红色分量0-255。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.GByte">
+            <summary>
+            获取或设置绿色分量0-255。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.BByte">
+            <summary>
+            获取或设置蓝色分量0-255。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.H">
+            <summary>
+            获取或设置色相角0-360。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.S">
+            <summary>
+            获取或设置饱和度0-1。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecColor.V">
+            <summary>
+            获取或设置明度0-1。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColor.SystemColor">
+            <summary>
+            缓存此类表示的颜色，便于外部获取。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColor.SystemBrush">
+            <summary>
+            缓存此类表示的颜色笔刷，便于外部获取。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToColor">
+            <summary>
+            转换为系统颜色表示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToBrush">
+            <summary>
+            转换为系统颜色的笔刷表示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToNewBrush">
+            <summary>
+            忽视缓存，转换为系统颜色的笔刷表示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToRGBHex">
+            <summary>
+            转换成16进制表示（大写）。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToARGBHex">
+            <summary>
+            转换成包含Alpha值的16进制表示（大写）。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToRGBInt">
+            <summary>
+            转换成Int表示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToARGBInt">
+            <summary>
+            转换成包含Alpha值的Int表示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.Binarize">
+            <summary>
+            以颜色亮度计算二值化的颜色。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.BinarizeInverse">
+            <summary>
+            以颜色亮度计算反相二值化的颜色。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.Binarize(EnneaCode.ColorHelper.ecColor)">
+            <summary>
+            以颜色亮度计算二值化的颜色。考虑Alpha与底色的混合。
+            </summary>
+            <param name="baseColor">要混合的底色。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.BinarizeInverse(EnneaCode.ColorHelper.ecColor)">
+            <summary>
+            以颜色亮度计算反相二值化的颜色。考虑Alpha与底色的混合。
+            </summary>
+            <param name="baseColor">要混合的底色。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.ToString">
+            <summary>
+            转换成包含Alpha值的16进制表示（大写）。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.RefreshSystemColorAndBrush">
+            <summary>
+            刷新缓存的颜色与笔刷。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.InvokePropertyChanged(System.String)">
+            <summary>
+            在属性变化时触发PropertyChanged事件。
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="E:EnneaCode.ColorHelper.ecColor.PropertyChanged">
+            <summary>
+            内含属性变化时触发的事件。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColor.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EnneaCode.ColorHelper.ecStringToEcColorTypeConverter">
+            <summary>
+            提供从string与ecColor的转换。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecStringToEcColorTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="sourceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecStringToEcColorTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecStringToEcColorTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EnneaCode.ColorHelper.ecColorHelper">
+            <summary>
+            协助对颜色进行操作。
+            </summary>
+        </member>
+        <member name="T:EnneaCode.ColorHelper.ecColorHelper.POINT">
+            <summary>
+            表示WIN32使用的Point结构。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColorHelper.POINT.X">
+            <summary>
+            获取或设置X值。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColorHelper.POINT.Y">
+            <summary>
+            获取或设置Y值。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.POINT.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.POINT.ToPoint">
+            <summary>
+            转换为System.Windows.Point。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.PickColorUnderMouse">
+            <summary>
+            获取鼠标指向的像素点颜色。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.PickColorFromScreen(System.Windows.Point)">
+            <summary>
+            取屏幕上指定点的颜色。
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.ToEcColor(System.Windows.Media.Color)">
+            <summary>
+            转换为ecColor。
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetPixelData(System.Windows.Media.Imaging.BitmapSource,EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy)">
+            <summary>
+            获取一张图像的像素数据（作为数组）。
+            </summary>
+            <param name="bitmap"></param>
+            <param name="acc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetAverageColor(System.Windows.Media.Imaging.BitmapSource,EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy)">
+            <summary>
+            获取一张图像的平均颜色。
+            </summary>
+            <param name="bitmap"></param>
+            <param name="acc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetAverageEcColor(System.Windows.Media.Imaging.BitmapSource,EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy)">
+            <summary>
+            获取一张图像的平均颜色。
+            </summary>
+            <param name="bitmap"></param>
+            <param name="acc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetHue(System.Windows.Media.Color)">
+            <summary>
+            获取颜色的色相角，用角度表示。
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetHue(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            获取颜色的色相角，用角度表示。
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetHue(System.Double,System.Double,System.Double)">
+            <summary>
+            获取颜色的色相角，用角度表示。
+            </summary>
+            <param name="r">0-1</param>
+            <param name="g">0-1</param>
+            <param name="b">0-1</param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetSaturation(System.Windows.Media.Color)">
+            <summary>
+            获取颜色的饱和度。
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetSaturation(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            获取颜色的饱和度。
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetSaturation(System.Double,System.Double,System.Double)">
+            <summary>
+            获取颜色的饱和度。
+            </summary>
+            <param name="r">0-1</param>
+            <param name="g">0-1</param>
+            <param name="b">0-1</param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetValue(System.Windows.Media.Color)">
+            <summary>
+            获取颜色的明亮度。
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetValue(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            获取颜色的明亮度。
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.GetValue(System.Double,System.Double,System.Double)">
+            <summary>
+            获取颜色的明亮度。
+            </summary>
+            <param name="r">0-1</param>
+            <param name="g">0-1</param>
+            <param name="b">0-1</param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.SetHue(System.Windows.Media.Color,System.Double)">
+            <summary>
+            将颜色改为指定的色相。
+            </summary>
+            <param name="c"></param>
+            <param name="hue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.SetSaturation(System.Windows.Media.Color,System.Double)">
+            <summary>
+            将颜色改为指定的饱和度。
+            </summary>
+            <param name="c"></param>
+            <param name="saturation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.SetValue(System.Windows.Media.Color,System.Double)">
+            <summary>
+            将颜色改为指定的亮度。
+            </summary>
+            <param name="c"></param>
+            <param name="value">目标亮度。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.Binarize(System.Windows.Media.Color)">
+            <summary>
+            以指定颜色的RGB平均值计算二值化的颜色。会考虑Alpha影响。
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecColorHelper.BinarizeInverse(System.Windows.Media.Color)">
+            <summary>
+            以指定颜色的RGB平均值计算反相二值化的颜色。会考虑Alpha影响。
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy">
+            <summary>
+            指示对图像进行采样的精度。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy.Low">
+            <summary>
+            将图像缩减为1%大小再采样。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy.Medium">
+            <summary>
+            将图像缩减为2.5%大小再采样。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy.High">
+            <summary>
+            将图像缩减为10%大小再采样。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy.Ultra">
+            <summary>
+            将图像缩减为50%大小再采样。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecColorHelper.SampleAccuracy.Complete">
+            <summary>
+            不缩减图像大小就采样。
+            </summary>
+        </member>
+        <member name="T:EnneaCode.ColorHelper.ecWindowColorPicker">
+            <summary>
+            取色器窗口。
+            </summary>
+            <summary>
+            ecWindowColorPicker
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.#ctor(EnneaCode.ColorHelper.ecColor)">
+            <summary>
+            
+            </summary>
+            <param name="cDefault">初始颜色。</param>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.RESOLUTIONPLAETTE">
+            <summary>
+            色板分辨率。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.RESOLUTIONGAUGE">
+            <summary>
+            色度计分辨率。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.STEP">
+            <summary>
+            绘制色板的每步子色块偏移量。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.BLOCKSIZE">
+            <summary>
+            绘制色板的子色块大小。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.IsRefreshingByRGB">
+            <summary>
+            是否正在使用RGB数据刷新颜色。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.IsRefreshingByHSV">
+            <summary>
+            是否正在使用HSV数据刷新颜色。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.ColorDefault">
+            <summary>
+            获取默认颜色（如果没有指定则不存在）。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.OnInitialized(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.Alpha">
+            <summary>
+            获取或设置此窗体所选颜色的Alpha通道值。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.AlphaProperty">
+            <summary>
+            获取此窗体所选颜色的Alpha属性。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.Red">
+            <summary>
+            获取或设置此窗体所选颜色的Red通道值。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.RedProperty">
+            <summary>
+            获取此窗体所选颜色的Red属性。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.Green">
+            <summary>
+            获取或设置此窗体所选颜色的Green通道值。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.GreenProperty">
+            <summary>
+            获取此窗体所选颜色的Green属性。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.Blue">
+            <summary>
+            获取或设置此窗体所选颜色的Blue通道值。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.BlueProperty">
+            <summary>
+            获取此窗体所选颜色的Blue属性。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.Hue">
+            <summary>
+            获取或设置此窗体所选颜色的色调。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.HueProperty">
+            <summary>
+            获取此窗体所选颜色的色调属性。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.Saturation">
+            <summary>
+            获取或设置此窗体所选颜色的饱和度。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.SaturationProperty">
+            <summary>
+            获取此窗体所选颜色的饱和度属性。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.Value">
+            <summary>
+            获取或设置此窗体所选颜色的明度。
+            </summary>
+        </member>
+        <member name="F:EnneaCode.ColorHelper.ecWindowColorPicker.ValueProperty">
+            <summary>
+            获取此窗体所选颜色的明度属性。
+            </summary>
+        </member>
+        <member name="P:EnneaCode.ColorHelper.ecWindowColorPicker.ColorPicked">
+            <summary>
+            获取拾取到的颜色。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.RefreshPlaette">
+            <summary>
+            重绘调色板。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.RefreshGauge">
+            <summary>
+            重绘色度计。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.RefreshPickedColorByHSV">
+            <summary>
+            根据HSV信息刷新拾取到的颜色。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.RefreshPickedColorByRGB">
+            <summary>
+            根据RGB信息刷新拾取到的颜色。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.RefreshPickedColorByA">
+            <summary>
+            根据Alpha信息刷新拾取到的颜色。
+            </summary>
+        </member>
+        <member name="M:EnneaCode.ColorHelper.ecWindowColorPicker.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>
