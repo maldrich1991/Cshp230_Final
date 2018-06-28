@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Main" Language="C#" MasterPageFile="~/StudentRegistration.Master" CodeBehind="Main.aspx.cs" Inherits="StudentClassRegistration.WebForm5" %>
+﻿<%@ Page Title="Main" Language="C#" MasterPageFile="~/StudentRegistration.Master" CodeBehind="Main.aspx.cs" Inherits="WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
     p {padding:1em; color:#000000}

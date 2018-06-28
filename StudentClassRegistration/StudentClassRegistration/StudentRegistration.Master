@@ -25,10 +25,9 @@
                 Font-Size="XX-Small" RenderingMode="List">
                 <Items>
                     <asp:MenuItem NavigateUrl="Main.aspx" Text="Main" />
-                    <asp:MenuItem NavigateUrl="StudentRegistration.aspx" Text=" Register" />
-                    <asp:MenuItem NavigateUrl="ClassList.aspx" Text="Class List" />
-                    <asp:MenuItem NavigateUrl="StudentSchedule.aspx" Text="Student Schedule" />
                     <asp:MenuItem NavigateUrl="LoginPage.aspx" Text="Login" />
+                    <asp:MenuItem NavigateUrl="StudentRegistration.aspx" Text="Register" />
+                    <asp:MenuItem NavigateUrl="StudentSchedule.aspx" Text="Student Schedule" />
                     <asp:MenuItem NavigateUrl="NewLogin.aspx" Text="New Login Page" />
                 </Items>
             </asp:Menu>

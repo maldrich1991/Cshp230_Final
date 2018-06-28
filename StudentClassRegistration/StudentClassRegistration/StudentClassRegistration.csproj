@@ -75,6 +75,11 @@
     <Content Include="Images\Header_MSA.jpg" />
     <Content Include="Images\MSA_BACKGROUND.jpg" />
     <Content Include="Images\MSA_University.jpg" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Styles\ClassReg.css" />
     <Content Include="Web.config" />
     <Content Include="LoginPage.aspx" />
@@ -82,9 +87,24 @@
     <Content Include="NewLogin.aspx" />
     <Content Include="StudentSchedule.aspx" />
     <Content Include="Main.aspx" />
+    <Content Include="Sorry.aspx" />
     <Content Include="StudentRegistration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sorry.aspx.cs">
+      <DependentUpon>Sorry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sorry.aspx.designer.cs">
+      <DependentUpon>Sorry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistration.aspx.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegistration.aspx.designer.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+    </Compile>
     <Content Include="App_code\DBProcessingClass.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -129,17 +149,12 @@
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StudentRegistration.aspx.cs">
-      <DependentUpon>StudentRegistration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StudentRegistration.aspx.designer.cs">
-      <DependentUpon>StudentRegistration.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="StudentRegistration.Master" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
